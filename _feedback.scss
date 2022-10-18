@@ -1,0 +1,184 @@
+
+.feedback--container {
+
+        @media screen and (min-width: $tablet) {
+        padding-left: 60px;
+        padding-right: 60px;}
+        
+        @media screen and (min-width: $desctop) {
+        padding-left: 190px;
+        padding-right: 190px;                
+            }
+}
+
+.feedback__image {
+    margin-bottom: 16px;
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 100px;
+    }
+    @media screen and (min-width: $desctop) {
+        margin-bottom: 170px;               
+    }  
+}
+.feedback__contain {
+    width: 100%;
+     margin-bottom: 40px;
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 52px;
+        width: 445px;
+    }
+    @media screen and (min-width: $desctop) {
+        margin-bottom: 0px;
+           width: 400px;  
+           margin-right: 50px;             
+    }     
+}
+.feedback__title {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.20;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $titles-color;
+    margin-bottom: 32px;
+    @media screen and (min-width: $tablet) {
+    font-size: 30px;
+    }
+    @media screen and (min-width: $desctop) {
+    font-size: 54px;}               
+        
+} 
+
+.feedback__subtitle {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $text-color;
+    @media screen and (min-width: $tablet) {
+    font-size: 20px;
+    color: $titles-color;
+    }    
+        @media screen and (min-width: $desctop) {
+    font-size: 28px;}               
+        
+}
+/* Modal-form */
+.form {
+ /*   padding: 40px 40px;*/
+    color: $footer-text-color;
+}
+
+
+.form-field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 42px;
+}
+
+.form-field input {
+    height: 40px;
+    padding: 17px 0px 17px 0px;
+    border-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover, &:focus {
+        color: $text-color;   
+        border-bottom: 2px solid $accent-color;
+        cursor: pointer;
+        outline: transparent;
+        }            
+    }
+
+.form-field.comment textarea {
+    height: 120px;
+    padding: 12px 0px;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    border-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+
+    background-color: transparent;
+    resize: none;
+    &:hover,
+    &:focus {
+    color: $text-color;   
+       border-bottom: 2px solid $accent-color;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);        
+    }
+}
+
+.policy {
+    margin-top: 20px;
+    margin-bottom: 30px;
+/*   text-align: center; */
+}
+
+.policy label {
+    font-size: 12px;
+    line-height: 1.17;
+    color: $text-color;        
+    @media screen and (min-width: $desctop) {
+    font-size: 14px;
+    line-height: 1.71;}
+
+}
+
+.policy-link {
+    margin-left: 4px;
+    color: $text-color;
+    text-decoration: underline;
+    &:focus {
+    margin-left: 4px;
+    color: $text-color;
+    outline: 1px solid $text-color;
+    }
+}
+
+
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+
+}
+
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 30px;
+    height: 28px;
+    border: 2px solid #E9EDFA;
+    border-width: 2px;
+    border-radius: 2px;
+    margin-right: 24px;
+    vertical-align: middle;
+}
+
+.checkbox:checked+.check-icon {
+    background-color: $background-color;
+    background-size: contain;
+    background-origin: content-box;
+    border-color: #E9EDFA;
+}
+.button--feedback {
+
+    margin-right: auto;
+    margin-left: auto;
+
+    &:hover,
+    &:focus {
+        border: 2px solid $accent-color;;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
