@@ -1,21 +1,6 @@
-
-.feedback--container {
-    @media screen and (min-width: $tablet) {
-    padding-left: 60px;
-    padding-right: 60px;}
-        
-    @media screen and (min-width: $desctop) {
-        display: flex;  
-        flex-wrap: wrap;
-        justify-content: space-between; 
-        padding-left: 190px;
-        padding-right: 190px;                
-    }
-}
-
-.feedback__picture{
-        padding-right: 20px;
-        padding-left: 20px;
+.feedback__picture {
+    padding-right: 20px;
+    padding-left: 20px;
     margin-bottom: 16px;
     @media screen and (min-width: $tablet) {
         padding-right: 60px;
@@ -23,16 +8,29 @@
         margin-bottom: 100px;
     }
     @media screen and (min-width: $desctop) {
-        width: 100%;
         padding-right: 0px;
         padding-left: 0px;
+        /*flex-shrink: 0;
+        display: flex;*/
         margin-bottom: 170px;               
     }  
 }
 
+.feedback__container {     
+    @media screen and (min-width: $desctop) {
+        display: flex;  
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+}
 
 
-.feedback__contain {
+.feedback__image {
+    display: block;
+    margin-left:0;
+    margin-right: 0;
+}
+.feedback__contant {
     margin-left:0;
     margin-right: 0;
     width: 280px;
@@ -43,8 +41,7 @@
     }
     @media screen and (min-width: $desctop) {
         margin-bottom: 0px;
-           width: 400px;  
-         
+           width: 400px;
     }     
 }
 .feedback__title {
@@ -58,8 +55,7 @@
     font-size: 30px;
     }
     @media screen and (min-width: $desctop) {
-    font-size: 54px;}               
-        
+    font-size: 54px;}                 
 } 
 
 .feedback__subtitle {
@@ -80,13 +76,10 @@
     width: 100%;
     margin-left:0;
     margin-right: 0;
-
     color: $footer-text-color;
     text-align: center;
-      @media screen and (min-width: $desctop) {
-    width: 510px;}               
-        
-
+    @media screen and (min-width: $desctop) {
+        width: 510px;}               
 }
 
 .form-field {
@@ -101,10 +94,10 @@
     margin-bottom: 32px;
     padding-bottom: 17px;
     border-color: transparent;
-        outline: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    outline: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
-    color: inherit;
+    color: $footer-text-color;
     background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -116,23 +109,21 @@
         }            
     }
 
+    
 .form-field.comment textarea {
-        padding-bottom: 60px;
-
+    padding-bottom: 60px;
     color: inherit;
-
-
     border-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     background-color: transparent;
     resize: none;
+    cursor: pointer;    
     &:hover,
     &:focus {
-    color: $text-color;   
-       border-bottom: 2px solid $accent-color;
-    outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);        
+        color: $text-color;   
+        border-bottom: 2px solid $accent-color;
+        outline: transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);        
     }
 }
 
@@ -146,19 +137,15 @@
 .policy {
     margin-top: 40px;
     margin-bottom: 40px;
-
 }
 
 .policy label {
-
-font-family: 'Gilroy';
-  @include font-style (400, 14px, 1.25);
-color: $text-color;
-     
+    font-family: 'Gilroy';
+    @include font-style (400, 14px, 1.25);
+    color: $text-color;
     @media screen and (min-width: $desctop) {
-    font-size: 16px;
-    line-height: 1.6;}
-
+        font-size: 16px;
+        line-height: 1.6;}
 }
 
 .policy-link {
@@ -176,7 +163,6 @@ color: $text-color;
 .checkbox {
     appearance: none;
     position: absolute;
-
 }
 
 .check-icon {
@@ -225,7 +211,8 @@ color: $text-color;
     text-transform: uppercase;
      color: $button-text-color;   
     background: none;
-
+    border: 0;
+     box-sizing: border-box;
     border: 1px solid $accent-color; 
     cursor: pointer;
 

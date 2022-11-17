@@ -11,6 +11,9 @@
 }
 
 .footer--container {
+     margin-left:0;
+    margin-right: 0;
+    width: 100%;
 
     text-align: left;    
     @media screen and (min-width: $tablet) {        
@@ -22,8 +25,7 @@
     justify-content: space-between; 
     align-items: flex-end;       
     }
-    @media screen and (min-width: $desctop) {  
-          width: 100%;      
+    @media screen and (min-width: $desctop) {        
         padding-left: 190px;
         padding-right: 80px;
         }
@@ -81,7 +83,7 @@
    .footer-select__item {     
   &:hover,
   &:focus {
-    color: $accent-color;
+    color: $text-color;
     text-decoration: none;
     outline: transparent;
   }
